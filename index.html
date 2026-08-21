@@ -1,6 +1,10 @@
 <!doctype html>
+<!-- ===== INÍCIO: DOCUMENTO HTML PRINCIPAL ===== -->
+<!-- Página do mapa conceitual interativo sobre ácidos nucleicos. -->
 <html lang="pt-BR">
 <head>
+  <!-- ===== CONFIGURAÇÕES DO DOCUMENTO E RECURSOS ===== -->
+  <!-- Metadados, título, fontes externas e folha de estilos principal. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Mapa conceitual interativo sobre ácidos nucleicos, genética molecular e biotecnologia.">
@@ -11,9 +15,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Barra de progresso e elementos decorativos globais. -->
   <div class="progress" id="progress"></div>
   <div class="molecule molecule-a" aria-hidden="true"></div><div class="molecule molecule-b" aria-hidden="true"></div>
   <header class="site-header">
+    <!-- ===== HEADER: MARCA, NAVEGAÇÃO E AÇÕES ===== -->
+    <!-- Logo, links das seções, modo estudo e menu responsivo. -->
     <a class="brand" href="#inicio" aria-label="Ácidos Nucleicos, início"><span class="brand-mark">⟡</span><span>GENOMA<span class="brand-dot">/</span>LAB</span></a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="#mapa">Mapa</a><a href="#fundamentos">Fundamentos</a><a href="#processos">Processos</a><a href="#aplicacoes">Aplicações</a>
@@ -22,12 +29,20 @@
   </header>
 
   <main>
+    <!-- ===== INÍCIO: CONTEÚDO PRINCIPAL ===== -->
+    <!-- Seção 06: medical-section reúne saúde, doenças genéticas e vacinas mRNA. -->
+    <!-- Seção 07: quiz-section fornece o container para perguntas e pontuação. -->
+    <!-- Seção 08: glossary-section contém filtro, termos e linha do tempo. -->
     <section class="hero" id="inicio">
+      <!-- ===== HERO / APRESENTAÇÃO ===== -->
+      <!-- Título, textos introdutórios, botão de exploração e hélice abstrata. -->
       <div class="hero-copy reveal"><p class="eyebrow">BIOLOGIA MOLECULAR · 01 / 08</p><h1>ÁCIDOS<br><em>NUCLEICOS</em></h1><p class="hero-subtitle">Do DNA e RNA às mutações, doenças genéticas e biotecnologia.</p><p class="hero-text">Explore a organização, estrutura, função e importância dos ácidos nucleicos, acompanhando o fluxo da informação genética desde o DNA até a expressão gênica e suas aplicações na saúde.</p><a class="primary-btn" href="#mapa">Explorar mapa <span>↘</span></a></div>
       <div class="hero-visual reveal" aria-label="Ilustração abstrata de uma dupla hélice de DNA"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="helix"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="hero-tag tag-one">A · T</span><span class="hero-tag tag-two">C · G</span><span class="hero-tag tag-three">5' → 3'</span></div>
     </section>
 
     <section class="map-section section-shell" id="mapa">
+      <!-- ===== MAPA CONCEITUAL INTERATIVO ===== -->
+      <!-- Busca, seletor, zoom, fluxograma, minimapa e painel de conceito. -->
       <div class="section-heading"><div><p class="eyebrow">NAVEGAÇÃO CONCEITUAL · 02 / 08</p><h2>O mapa da <em>informação</em></h2></div><div class="map-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Pesquisar conceito..." aria-label="Pesquisar conceito"><kbd>/</kbd></label><button class="tool-btn" id="resetMap" type="button" title="Centralizar mapa">⟳</button></div></div>
       <div class="map-toolbar" aria-label="Controles do mapa"><div class="map-jump"><label for="jumpSelect">IR PARA</label><select id="jumpSelect"><option value="root">Ácidos nucleicos</option><option value="dna">DNA</option><option value="rna">RNA</option><option value="replicacao">Replicação</option><option value="transcricao">Transcrição</option><option value="traducao">Tradução</option><option value="proteina">Proteínas</option><option value="mutacoes">Mutações</option><option value="doencas">Doenças genéticas</option><option value="diagnostico">Diagnóstico</option><option value="biotec">Biotecnologia</option><option value="vacinas">Vacinas</option></select></div><div class="map-controls"><button class="tool-btn" id="zoomOut" type="button" title="Afastar">−</button><output id="zoomValue">100%</output><button class="tool-btn" id="zoomIn" type="button" title="Aproximar">+</button><button class="tool-btn" id="fitMap" type="button">Ajustar</button><button class="tool-btn" id="fullscreenMap" type="button">⛶ Tela cheia</button><button class="tool-btn" id="presentationMode" type="button">Modo apresentação</button></div></div>
       <div class="map-layout map-layout-large">
@@ -37,13 +52,19 @@
       <div class="map-footer"><div class="map-legend"><span><i class="legend-dot level-main"></i>conceito principal</span><span><i class="legend-dot level-process"></i>processo</span><span><i class="legend-dot level-detail"></i>subprocesso</span><span><i class="legend-dot level-example"></i>exemplo / aplicação</span></div><div class="minimap" id="minimap" aria-label="Minimapa do fluxograma"><div class="minimap-viewport" id="minimapViewport"></div></div></div>
     </section>
 
+    <!-- ===== FUNDAMENTOS MOLECULARES ===== -->
+    <!-- Composição do nucleotídeo, pareamento e comparação entre DNA e RNA. -->
     <section class="content-band" id="fundamentos"><div class="section-shell"><div class="section-heading"><div><p class="eyebrow">BASES MOLECULARES · 03 / 08</p><h2>Do bloco ao <em>código</em></h2></div><p class="section-intro">A informação genética nasce de uma arquitetura simples: unidades repetidas que formam moléculas longas, orientadas e complementares.</p></div>
       <div class="foundation-grid"><article class="feature-panel nucleotide-panel"><div class="panel-label">COMPOSIÇÃO · NUCLEOTÍDEO</div><div class="stack-diagram"><div class="stack-item base">BASE<br><small>A · T · C · G · U</small></div><div class="plus">+</div><div class="stack-item sugar">PENTOSE<br><small>ribose / desoxirribose</small></div><div class="plus">+</div><div class="stack-item phosphate">FOSFATO<br><small>ligações 5' → 3'</small></div></div><p>Um nucleotídeo é a unidade estrutural de DNA e RNA. Sem o fosfato, temos um nucleosídeo. Nucleotídeos se unem por ligações fosfodiéster, formando uma cadeia polinucleotídica com polaridade.</p></article><article class="feature-panel dna-panel"><div class="panel-label">PAREAMENTO · DNA</div><div class="pair-row"><strong>A</strong><span>··</span><strong>T</strong><small>2 ligações de hidrogênio</small></div><div class="pair-row"><strong>C</strong><span>···</span><strong>G</strong><small>3 ligações de hidrogênio</small></div><p>As duas fitas são antiparalelas: uma corre de 5' para 3' e a outra de 3' para 5'. A sequência de bases organiza genes, genes formam cromossomos e o conjunto é o genoma.</p></article></div>
       <div class="comparison"><div class="panel-label">LEITURA RÁPIDA · DNA × RNA</div><div class="compare-grid"><div class="compare-head"><span>CRITÉRIO</span><b>DNA</b><b>RNA</b></div><div class="compare-row"><span>Açúcar</span><b>Desoxirribose</b><b>Ribose</b></div><div class="compare-row"><span>Bases</span><b>A, T, C, G</b><b>A, U, C, G</b></div><div class="compare-row"><span>Estrutura</span><b>Dupla hélice</b><b>Geralmente simples</b></div><div class="compare-row"><span>Função</span><b>Armazenar</b><b>Expressar e regular</b></div><div class="compare-row"><span>Estabilidade</span><b>Alta</b><b>Menor, temporário</b></div></div></div>
     </div></section>
 
+    <!-- ===== FLUXO DA EXPRESSÃO GÊNICA ===== -->
+    <!-- Etapas DNA, transcrição, RNA, tradução e proteína, com notas explicativas. -->
     <section class="section-shell process-section" id="processos"><div class="section-heading"><div><p class="eyebrow">FLUXO DA VIDA · 04 / 08</p><h2>DNA → RNA → <em>proteína</em></h2></div><p class="section-intro">A expressão gênica transforma uma sequência de bases em moléculas que trabalham na célula: enzimas, receptores, estruturas e sinais.</p></div><div class="flow"><div class="flow-step"><span>01</span><strong>DNA</strong><small>gene / molde</small></div><div class="flow-line"></div><div class="flow-step active"><span>02</span><strong>TRANSCRIÇÃO</strong><small>RNA polimerase</small></div><div class="flow-line"></div><div class="flow-step"><span>03</span><strong>RNA</strong><small>mRNA processado</small></div><div class="flow-line"></div><div class="flow-step active"><span>04</span><strong>TRADUÇÃO</strong><small>ribossomo + tRNA</small></div><div class="flow-line"></div><div class="flow-step"><span>05</span><strong>PROTEÍNA</strong><small>função celular</small></div></div><div class="process-notes"><article><span class="note-number">A</span><h3>Transcrição</h3><p>No promotor, a RNA polimerase inicia a cópia de um gene. O RNA é alongado, recebe 5' cap, passa por splicing para remover íntrons e ganha cauda poli-A.</p></article><article><span class="note-number">B</span><h3>Tradução</h3><p>O ribossomo lê códons do mRNA. Cada tRNA traz um aminoácido pelo anticódon correspondente. AUG inicia; UAA, UAG e UGA sinalizam STOP.</p></article><article><span class="note-number">C</span><h3>Proteínas</h3><p>A sequência de aminoácidos define estruturas primária, secundária, terciária e quaternária. O dobramento determina a função e o fenótipo.</p></article></div></section>
 
+    <!-- ===== LABORATÓRIO DIGITAL E APLICAÇÕES ===== -->
+    <!-- Tradutor de RNA e relação visual entre DNA, mutação, proteína e fenótipo. -->
     <section class="content-band tools-band" id="aplicacoes"><div class="section-shell"><div class="section-heading"><div><p class="eyebrow">LABORATÓRIO DIGITAL · 05 / 08</p><h2>Aprenda <em>fazendo</em></h2></div><p class="section-intro">Experimente a leitura de uma sequência e conecte mutações às ferramentas que investigam a vida.</p></div><div class="lab-grid"><article class="tool-panel"><div class="panel-label">TRADUTOR DE RNA</div><h3>Do códon ao aminoácido</h3><p>Insira RNA usando A, U, C e G. Espaços são aceitos entre os códons.</p><div class="translator-input"><input id="rnaInput" value="AUG GCU UUU UGA" aria-label="Sequência de RNA"><button id="translateBtn" class="primary-btn small" type="button">Traduzir</button></div><div id="translationOutput" class="translation-output" aria-live="polite"></div></article><article class="tool-panel mutation-panel"><div class="panel-label">DO DNA À DOENÇA</div><div class="mutation-flow"><span>DNA</span><b>→</b><span>MUTAÇÃO</span><b>→</b><span>PROTEÍNA</span><b>→</b><span>FENÓTIPO</span></div><p>Substituições podem ser silenciosas, missense ou nonsense. Inserções e deleções podem causar frameshift. O efeito pode ser neutro, benéfico ou prejudicial; nem toda mutação causa doença.</p><div class="chip-row"><span>proto-oncogene</span><span>supressor tumoral</span><span>CRISPR-Cas9</span></div></article></div></div></section>
 
     <section class="section-shell medical-section"><div class="medical-grid"><article><p class="eyebrow">SAÚDE E SOCIEDADE · 06 / 08</p><h2>Genética que chega<br>à <em>medicina</em></h2><p>O cariótipo observa o número e a forma dos cromossomos; PCR amplifica regiões específicas; sequenciamento lê bases; aconselhamento genético contextualiza resultados com cuidado e autonomia.</p><div class="medical-list"><div><b>Doenças monogênicas</b><span>Fibrose cística · CFTR / recessiva<br>Anemia falciforme · HBB / missense<br>Fenilcetonúria · PAH / recessiva<br>Hemofilia · F8 ou F9 / ligada ao X</span></div><div><b>Alterações cromossômicas</b><span>Down · trissomia 21<br>Turner · monossomia X<br>Klinefelter · XXY<br>Edwards · trissomia 18 · Patau · trissomia 13</span></div></div></article><article class="vaccine-panel"><div class="panel-label">VACINAS DE mRNA</div><div class="vaccine-flow"><span>mRNA</span><i>↓</i><span>célula</span><i>↓</i><span>antígeno</span><i>↓</i><span>memória imune</span></div><p>O mRNA orienta temporariamente a produção de uma proteína antigênica no citoplasma. O sistema imune reconhece o antígeno, ativa anticorpos e memória. Esse mRNA não precisa entrar no núcleo e não altera o DNA.</p></article></div></section>
@@ -51,7 +72,12 @@
     <section class="quiz-section content-band"><div class="section-shell"><div class="section-heading"><div><p class="eyebrow">VERIFICAÇÃO · 07 / 08</p><h2>Teste seus <em>conhecimentos</em></h2></div><p class="section-intro">Oito questões rápidas para consolidar as conexões do mapa.</p></div><div id="quiz" class="quiz-box"></div></div></section>
     <section class="section-shell glossary-section"><div class="section-heading"><div><p class="eyebrow">REFERÊNCIA · 08 / 08</p><h2>Glossário <em>essencial</em></h2></div><input class="glossary-search" id="glossarySearch" placeholder="Filtrar termos..." aria-label="Filtrar glossário"></div><div class="glossary-grid" id="glossaryGrid"></div><div class="timeline"><div class="timeline-line"></div><div><b>1865</b><span>Mendel</span></div><div><b>1953</b><span>Dupla hélice</span></div><div><b>1983</b><span>PCR</span></div><div><b>2003</b><span>Genoma Humano</span></div><div><b>2012</b><span>CRISPR</span></div><div><b>2020</b><span>Vacinas mRNA</span></div></div></section>
   </main>
-  <footer><div class="section-shell footer-inner"><div class="brand"><span class="brand-mark">⟡</span><span>GENOMA<span class="brand-dot">/</span>LAB</span></div><p>Mapa Conceitual — Ácidos Nucleicos<br><small>Material educacional desenvolvido para fins acadêmicos. Informações médicas devem ser confirmadas em fontes científicas e profissionais especializados.</small></p><a href="#inicio" class="top-link">↑ topo</a></div></footer>
+  <!-- ===== FIM: CONTEÚDO PRINCIPAL ===== -->
+  <footer><div class="section-shell footer-inner"><div class="brand"><span class="brand-mark">⟡</span><span>GENOMA<span class="brand-dot">/</span>LAB</span></div><p>Mapa Conceitual — Ácidos Nucleicos<br><small>Material educacional desenvolvido para fins acadêmicos. Informações médicas devem ser confirmadas em fontes científicas e profissionais especializados.</small></p><a href="#inicio" class="top-link">↑ topo</a></div></
+    <div @copyright="2026" class="footer-bottom"><small>© 2026 peepedrin. Todos os direitos reservados.</small></footer>   
+  
+  </footer>
   <script src="script.js"></script>
 </body>
+<!-- ===== FIM: DOCUMENTO HTML PRINCIPAL ===== -->
 </html>
